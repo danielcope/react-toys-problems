@@ -8,11 +8,11 @@ const Counter = () => {
       <div>
         <span>{count}</span>
       </div>
-      <div>
+      <section>
         <button onClick={() => updateCounter(count - 1)}>-</button>
         <button onClick={() => updateCounter(0)}>Reset</button>
         <button onClick={() => updateCounter(count + 1)}>+</button>
-      </div>
+      </section>
     </div>
   );
 };
