@@ -29,9 +29,9 @@ const Weather = () => {
     <div className="card">
       <form>
         <section>
-          <span>What city do you live in?</span>
-        </section>
-        <section>
+          <section>
+            <span>What city do you live in?</span>
+          </section>
           <input
             type="text"
             onChange={(e) => changeCity(e.target.value)}
