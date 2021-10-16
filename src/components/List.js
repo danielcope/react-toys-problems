@@ -38,18 +38,21 @@ const List = () => {
   };
 
   return (
-    <div className="card">
-      <div>
-        <input
-          type="text"
-          placeholder="Add item here..."
-          value={input}
-          onChange={(e) => updateInput(e.target.value)}
-        />
-        <button onClick={() => addToList()}>Add</button>
-      </div>
-      <section className="list">{mappedToDoList}</section>
-    </div>
+    <section className="card">
+      <section>
+        <h4>To-Do List</h4>
+        <section>
+          <input
+            type="text"
+            placeholder="Add item here..."
+            value={input}
+            onChange={(e) => updateInput(e.target.value)}
+          />
+          <button onClick={() => addToList()}>Add</button>
+        </section>
+        <section className="list">{mappedToDoList}</section>
+      </section>
+    </section>
   );
 };
 

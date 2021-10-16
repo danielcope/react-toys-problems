@@ -6,7 +6,7 @@ const Counter = () => {
   return (
     <div className="card">
       <div>
-        <span>{count}</span>
+        <h1>{count}</h1>
       </div>
       <section>
         <button onClick={() => updateCounter(count - 1)}>-</button>

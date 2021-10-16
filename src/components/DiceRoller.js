@@ -23,33 +23,34 @@ const DiceRoller = () => {
 
   return (
     <div className="card">
-      <span>{finalRoll}</span>
+      <h1>{finalRoll}</h1>
       <input
         type="number"
         value={numOfDice}
+        placeholder="number of dice"
         onChange={(e) => handleNumOfDiceChange(e.target.value)}
       />
       <section className="dice-bag">
         <div className="dice" onClick={() => roll(4)}>
-          4
+          <p>4</p>
         </div>
         <div className="dice" onClick={() => roll(6)}>
-          6
+          <p>6</p>
         </div>
         <div className="dice" onClick={() => roll(8)}>
-          8
+          <p>8</p>
         </div>
         <div className="dice" onClick={() => roll(10)}>
-          10
+          <p>10</p>
         </div>
         <div className="dice" onClick={() => roll(12)}>
-          12
+          <p>12</p>
         </div>
         <div className="dice" onClick={() => roll(20)}>
-          20
+          <p>20</p>
         </div>
         <div className="dice" onClick={() => roll(100)}>
-          100
+          <p>100</p>
         </div>
       </section>
     </div>

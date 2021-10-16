@@ -1,54 +1,52 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Weather = () => {
   const [cityInput, changeCity] = useState("");
-  const [weatherApiKey, setKey] = useState("");
-  const [weatherInfo, setWeatherInfo] = useState(null);
+  const [weatherInfo, setWeatherInfo] = useState({ current: { temp_f: 0 } });
+
+  const handleCityChange = (e) => changeCity(e);
 
   const getWeatherForCity = () => {
+    let apiKey = "";
+    console.log("hit");
+
+    axios
+      .get("/api/weather/key")
+      .then((res) => {
+        apiKey = res.data;
+      })
+      .catch((err) => console.log(err));
+
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${cityInput}`
+        `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityInput}`
       )
       .then((res) => {
-        setWeatherInfo(res.data);
-        console.log(res.data);
+        console.log(res);
+        // setWeatherInfo(res.data);
       })
       .catch((err) => console.error(err));
   };
-
-  useEffect(() => {
-    axios
-      .get("/api/weather/key", { test: "city" })
-      .then((res) => setKey(res.data))
-      .catch((err) => console.log(err));
-  }, []);
 
   return (
     <div className="card">
       <form>
         <section>
-          <section>
-            <span>What city do you live in?</span>
-          </section>
+          <h4>Check the weather</h4>
           <input
             type="text"
-            onChange={(e) => changeCity(e.target.value)}
+            onChange={(e) => handleCityChange(e.target.value)}
             placeholder="city"
             value={cityInput}
           />
+          <button onClick={getWeatherForCity()}>Submit</button>
         </section>
       </form>
-      <button onClick={() => getWeatherForCity()}>Submit</button>
       <section>
-        {!weatherInfo ? (
-          <div></div>
-        ) : (
-          <div>
-            <span>Temp: {weatherInfo.current.temp_f} &#176;F</span>
-          </div>
-        )}
+        <div>
+          <span>Temp: {weatherInfo.current.temp_f} &#176;F</span>
+        </div>
       </section>
     </div>
   );

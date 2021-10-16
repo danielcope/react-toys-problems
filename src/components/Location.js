@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-const Location = () => {
-  const [locationObject, updateLocationObject] = useState({});
+// const Location = () => {
+//   const [locationObject, updateLocationObject] = useState({});
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      updateLocationObject(position);
-      console.log(position);
-    });
-  }, []);
+//   useEffect(() => {
+//     navigator.geolocation.getCurrentPosition((position) => {
+//       updateLocationObject(position);
+//       console.log(position);
+//     });
+//   }, []);
 
-  return (
-    <section className="card">
-      <span>Location</span>
-    </section>
-  );
-};
+//   return (
+//     <section className="card">
+//       <span>Location</span>
+//     </section>
+//   );
+// };
 
-export default Location;
+// export default Location;
