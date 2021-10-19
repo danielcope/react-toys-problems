@@ -2,6 +2,7 @@ import "./App.css";
 import Counter from "./components/Counter";
 import DiceRoller from "./components/DiceRoller";
 import List from "./components/List";
+import TikTakToe from "./components/TikTakToe";
 import Weather from "./components/Weather";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <List />
       <Counter />
       <DiceRoller />
-      <Weather />
+      {/* <Weather /> */}
+      <TikTakToe />
     </div>
   );
 }

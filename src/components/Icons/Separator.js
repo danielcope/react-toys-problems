@@ -1,12 +1,7 @@
 import React from "react";
-import styles from "../../App.css";
 
 const Separator = () => {
-  return (
-    <section>
-      <span style={styles.separator}></span>
-    </section>
-  );
+  return <section className="separator"></section>;
 };
 
 export default Separator;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Separator from "../components/Icons/Separator";
 
 const List = () => {
   const [input, updateInput] = useState("");
@@ -11,9 +12,14 @@ const List = () => {
     updateToDoList(newArr);
 
     let mappedToDoList = newArr.map((e, i) => (
-      <section key={i}>
-        <span>{e}</span>
-        <button onClick={() => removeFromList(e)}>X</button>
+      <section key={i} className="to-do-list-item">
+        <span className="to-do-list-text">{e}</span>
+        <section className="to-do-list-buttons">
+          {/* <div className="pencil">&#9998;</div> */}
+          <div onClick={() => removeFromList(e)} className="trash-can">
+            &#128465;
+          </div>
+        </section>
       </section>
     ));
 
@@ -28,9 +34,14 @@ const List = () => {
     updateToDoList(newArr);
 
     let mappedToDoList = newArr.map((e, i) => (
-      <section key={i}>
-        <span>{e}</span>
-        <button onClick={() => removeFromList(e)}>X</button>
+      <section key={i} className="to-do-list-item">
+        <span className="to-do-list-text">{e}</span>
+        <section className="to-do-list-buttons">
+          {/* <div className="pencil">&#9998;</div> */}
+          <div onClick={() => removeFromList(e)} className="trash-can">
+            &#128465;
+          </div>
+        </section>
       </section>
     ));
 
@@ -39,7 +50,7 @@ const List = () => {
 
   return (
     <section className="card">
-      <section>
+      <section className="card-container">
         <h4>To-Do List</h4>
         <section>
           <input
@@ -50,6 +61,7 @@ const List = () => {
           />
           <button onClick={() => addToList()}>Add</button>
         </section>
+        <Separator />
         <section className="list">{mappedToDoList}</section>
       </section>
     </section>

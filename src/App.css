@@ -43,7 +43,7 @@ p {
 }
 
 .card {
-  min-height: 400px;
+  min-height: 300px;
   width: 350px;
   min-width: 250px;
   margin: 25px;
@@ -57,9 +57,12 @@ p {
   box-shadow: 2px 2px 7px 2px #2c2c2c;
 }
 
-.list {
+.card-container {
+  height: 90%;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .dice-bag {
@@ -84,8 +87,44 @@ p {
 }
 
 .separator {
-  border-bottom: solid 1px black;
+  border-bottom: 2.5px solid #fae183;
   margin: 5px;
   height: 10px;
   width: 80%;
+}
+
+.list {
+  height: 60%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.to-do-list-item {
+  width: 95%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-do-list-text {
+  max-width: 75%;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+}
+
+.to-do-list-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+
+.pencil {
+  font-size: 22px;
+}
+ 
+.trash-can {
+  font-size: 22px;
 }
