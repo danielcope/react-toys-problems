@@ -7,13 +7,13 @@ const Counter = () => {
     <section className="card">
       <section className="card-container">
         <h1>Counter</h1>
-        <section>
-          <h1>{count}</h1>
-        </section>
-        <section>
-          <button onClick={() => updateCounter(count - 1)}>-</button>
-          <button onClick={() => updateCounter(0)}>Reset</button>
-          <button onClick={() => updateCounter(count + 1)}>+</button>
+        <section className="counter-button-container">
+          <h4>{count}</h4>
+          <section>
+            <button onClick={() => updateCounter(count - 1)}>-</button>
+            <button onClick={() => updateCounter(0)}>Reset</button>
+            <button onClick={() => updateCounter(count + 1)}>+</button>
+          </section>
         </section>
       </section>
     </section>

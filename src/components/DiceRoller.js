@@ -23,35 +23,38 @@ const DiceRoller = () => {
 
   return (
     <div className="card">
-      <h1>{finalRoll}</h1>
-      <input
-        type="number"
-        value={numOfDice}
-        placeholder="number of dice"
-        onChange={(e) => handleNumOfDiceChange(e.target.value)}
-      />
-      <section className="dice-bag">
-        <div className="dice" onClick={() => roll(4)}>
-          <p>4</p>
-        </div>
-        <div className="dice" onClick={() => roll(6)}>
-          <p>6</p>
-        </div>
-        <div className="dice" onClick={() => roll(8)}>
-          <p>8</p>
-        </div>
-        <div className="dice" onClick={() => roll(10)}>
-          <p>10</p>
-        </div>
-        <div className="dice" onClick={() => roll(12)}>
-          <p>12</p>
-        </div>
-        <div className="dice" onClick={() => roll(20)}>
-          <p>20</p>
-        </div>
-        <div className="dice" onClick={() => roll(100)}>
-          <p>100</p>
-        </div>
+      <section className="card-container">
+        <h1>Dice Roller</h1>
+        <h4>Result: {finalRoll}</h4>
+        <input
+          type="number"
+          value={numOfDice}
+          placeholder="number of dice"
+          onChange={(e) => handleNumOfDiceChange(e.target.value)}
+        />
+        <section className="dice-bag">
+          <div className="dice" onClick={() => roll(4)}>
+            <p>4</p>
+          </div>
+          <div className="dice" onClick={() => roll(6)}>
+            <p>6</p>
+          </div>
+          <div className="dice" onClick={() => roll(8)}>
+            <p>8</p>
+          </div>
+          <div className="dice" onClick={() => roll(10)}>
+            <p>10</p>
+          </div>
+          <div className="dice" onClick={() => roll(12)}>
+            <p>12</p>
+          </div>
+          <div className="dice" onClick={() => roll(20)}>
+            <p>20</p>
+          </div>
+          <div className="dice" onClick={() => roll(100)}>
+            <p>100</p>
+          </div>
+        </section>
       </section>
     </div>
   );

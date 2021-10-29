@@ -1,11 +1,17 @@
 body {
-  background: #f4b953;
-  color: #fae183;
+  background: #c0caad;
+  color: #afbaa7;
 }
 
 h1 {
   margin: 5px 0 5px 0;
-  font-size: 40px;
+  font-size: 38px;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 5px 0 5px 0;
+  font-size: 18px;
 }
 
 h4 {
@@ -17,19 +23,30 @@ h4 {
 input {
   height: 25px;
   border-radius: 5px;
-  border: 1px solid #9d3327;
+  border: none;
   padding: 0 0 0 15px;
-  box-shadow: inset 0px 0px 2px 0px rgb(175, 175, 175);
+  box-shadow: inset 0.5px 0.5px 3px 0.5px rgb(139, 129, 129);
+  background: rgb(247, 235, 235);
 }
 
 button {
-  width: 60px;
+  min-width: 60px;
   height: 25px;
-  background: white;
+  background: #9da9a0;
   border: none;
   border-radius: 5px;
   margin: 0 0 0 5px;
-  box-shadow: 1px 1px 5px 1px rgb(116, 106, 106);
+  box-shadow: 1px 2px 5px 1px rgb(49, 48, 48);
+}
+
+button:hover {
+  cursor: pointer;
+  background: #848f87;
+}
+
+button:active {
+  box-shadow: none;
+  background: #9da9a0;
 }
 
 p {
@@ -53,7 +70,7 @@ p {
   align-items: center;
   border: none;
   border-radius: 15px;
-  background: #9d3327;
+  background: #654c4f;
   box-shadow: 2px 2px 7px 2px #2c2c2c;
 }
 
@@ -66,8 +83,8 @@ p {
 }
 
 .dice-bag {
-  height: 30%;
-  width: 80%;
+  height: 40%;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -76,12 +93,12 @@ p {
 }
 
 .dice {
-  height: 40px;
-  min-width: 45px;
+  height: 35px;
+  min-width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fae183;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   margin: 0 0 0 15px;
 }
@@ -124,7 +141,26 @@ p {
 .pencil {
   font-size: 22px;
 }
- 
+
 .trash-can {
   font-size: 22px;
+}
+
+.trash-can:hover {
+  cursor: pointer;
+}
+
+.counter-button-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.person-info-container {
+  height: 65%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

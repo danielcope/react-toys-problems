@@ -51,7 +51,7 @@ const List = () => {
   return (
     <section className="card">
       <section className="card-container">
-        <h4>To-Do List</h4>
+        <h1>To-Do List</h1>
         <section>
           <input
             type="text"
