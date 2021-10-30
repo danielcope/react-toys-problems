@@ -1,5 +1,5 @@
-import axios from "axios";
-import React, { useState } from "react";
+// import axios from "axios";
+import React from "react";
 
 const Weather = () => {
   return <div className="card"></div>;

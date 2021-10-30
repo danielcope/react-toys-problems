@@ -60,9 +60,8 @@ p {
 }
 
 .card {
-  min-height: 300px;
-  width: 350px;
-  min-width: 250px;
+  min-height: 400px;
+  min-width: 300px;
   margin: 25px;
   display: flex;
   flex-direction: column;
@@ -72,10 +71,11 @@ p {
   border-radius: 15px;
   background: #654c4f;
   box-shadow: 2px 2px 7px 2px #2c2c2c;
+  flex: 1;
 }
 
 .card-container {
-  height: 90%;
+  min-height: 90%;
   width: 90%;
   display: flex;
   flex-direction: column;
