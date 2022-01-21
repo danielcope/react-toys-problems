@@ -1,28 +1,36 @@
 import "./App.css";
+import React from "react";
 import Counter from "./components/Counter";
 import DiceRoller from "./components/DiceRoller";
 import List from "./components/List";
 import RandomPerson from "./components/RandomPerson";
-import RandomFact from "./components/RandomFact";
+import JokeOfTheDay from "./components/JokeOfTheDay";
+import Nav from "./components/Nav";
+import AosTesting from "./components/AosTesting";
 
-//component not in use
-// import TikTakToe from "./components/TikTakToe";
-// import Weather from "./components/Weather";
-// import Nasa from "./components/Nasa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-function App() {
-  return (
-    <div className="App">
-      <List />
-      <Counter />
-      <DiceRoller />
-      <RandomPerson />
-      <RandomFact />
-      {/* <Weather /> */}
-      {/* <TikTakToe /> */}
-      {/* <Nasa /> */}
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    AOS.init({
+      duration: 1000,
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+        <List />
+        <Counter />
+        <DiceRoller />
+        <RandomPerson />
+        <JokeOfTheDay />
+        <AosTesting />
+      </div>
+    );
+  }
 }
 
 export default App;

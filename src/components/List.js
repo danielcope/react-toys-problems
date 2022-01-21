@@ -48,6 +48,12 @@ const List = () => {
     updateMappedToDoList(mappedToDoList);
   };
 
+  const handleKeypress = (e) => {
+    if (e.keyCode === 13 && input !== "") {
+      addToList();
+    }
+  };
+
   return (
     <section className="card">
       <section className="card-container">
@@ -58,6 +64,7 @@ const List = () => {
             placeholder="Add item here..."
             value={input}
             onChange={(e) => updateInput(e.target.value)}
+            onKeyDown={handleKeypress}
           />
           <button onClick={() => addToList()}>Add</button>
         </section>

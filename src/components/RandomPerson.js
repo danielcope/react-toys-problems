@@ -20,7 +20,7 @@ const RandomPerson = () => {
   };
 
   return (
-    <section className="card">
+    <section data-aos="fade-right" className="card">
       <section className="card-container">
         <h1>Random Person</h1>
         <button onClick={() => getPerson()}>New Person</button>
