@@ -1,29 +1,80 @@
 import React, { useState } from "react";
+import "animate.css";
 
 const Nav = () => {
-  const [menuOpen, flipMenu] = useState(false);
+  const [menu, flipMenu] = useState(false);
+
+  const navList = [
+    {
+      name: "To Do List",
+      id: "#to-do-list-card",
+    },
+    {
+      name: "Counter",
+      id: "#counter-card",
+    },
+    {
+      name: "Dice Roller",
+      id: "#dice-roller-card",
+    },
+    {
+      name: "Random Person",
+      id: "#random-person-card",
+    },
+    {
+      name: "Joke of the Day",
+      id: "#joke-of-the-day-card",
+    },
+    {
+      name: "Aos Testing",
+      id: "#aos-testing-card",
+    },
+  ];
 
   return (
     <section>
-      <span
-        className={menuOpen ? "light-ham" : "dark-ham"}
-        onClick={() => flipMenu(!menuOpen)}
-      >
-        <div className={!menuOpen ? "top-line" : "top-line-x"}></div>
-        <div className={!menuOpen ? "mid-line" : "mid-line-x"}></div>
-        <div className={!menuOpen ? "bot-line" : "bot-line-x"}></div>
-      </span>
-      <nav className={menuOpen ? "nav-opened" : "nav-closed"}>
+      <MenuButton menu={menu} flipMenu={flipMenu} />
+      <nav className={menu ? "nav-opened" : "nav-closed"}>
         <ul>
-          <a href="#joke-of-the-day">
-            <li>text</li>
-          </a>
-          <a href="#joke-of-the-day">
-            <li>text</li>
-          </a>
+          <NavList navList={navList} />
         </ul>
       </nav>
     </section>
+  );
+};
+
+const MenuButton = (props) => {
+  return (
+    <div
+      className="ham-button-container"
+      onClick={() => props.flipMenu(!props.menu)}
+    >
+      <div
+        className={!props.menu ? "line top-line" : "light-line top-line-x"}
+      ></div>
+      <div
+        className={!props.menu ? "line mid-line" : "light-line mid-line-x"}
+      ></div>
+      <div
+        className={!props.menu ? "line bot-line" : "light-line bot-line-x"}
+      ></div>
+    </div>
+  );
+};
+
+const NavList = (props) => {
+  const mappedNavList = props.navList.map((ele, i) => (
+    <NavLink key={ele.name} name={ele.name} id={ele.id} />
+  ));
+
+  return <ul>{mappedNavList}</ul>;
+};
+
+const NavLink = (props) => {
+  return (
+    <li>
+      <a href={props.id}>{props.name}</a>
+    </li>
   );
 };
 

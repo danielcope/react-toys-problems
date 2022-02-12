@@ -18,7 +18,7 @@ const RandomFact = (props) => {
   };
 
   return (
-    <section data-aos="fade-left" className="card" id="joke-of-the-day">
+    <section data-aos="fade-left" className="card" id="joke-of-the-day-card">
       <section className="card-container">
         <h1>Joke of the day</h1>
         {joke.contents ? (

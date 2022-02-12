@@ -15,7 +15,6 @@ const List = () => {
       <section key={i} className="to-do-list-item">
         <span className="to-do-list-text">{e}</span>
         <section className="to-do-list-buttons">
-          {/* <div className="pencil">&#9998;</div> */}
           <div onClick={() => removeFromList(e)} className="trash-can">
             &#128465;
           </div>
@@ -37,7 +36,6 @@ const List = () => {
       <section key={i} className="to-do-list-item">
         <span className="to-do-list-text">{e}</span>
         <section className="to-do-list-buttons">
-          {/* <div className="pencil">&#9998;</div> */}
           <div onClick={() => removeFromList(e)} className="trash-can">
             &#128465;
           </div>
@@ -55,7 +53,7 @@ const List = () => {
   };
 
   return (
-    <section className="card">
+    <section className="card" id="to-do-list-card">
       <section className="card-container">
         <h1>To-Do List</h1>
         <section>

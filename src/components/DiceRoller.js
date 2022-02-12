@@ -22,7 +22,7 @@ const DiceRoller = () => {
   };
 
   return (
-    <div data-aos="fade-up" className="card">
+    <div data-aos="fade-up" className="card" id="dice-roller-id">
       <section className="card-container">
         <h1>Dice Roller</h1>
         <h4>Result: {finalRoll}</h4>

@@ -4,7 +4,7 @@ const Counter = () => {
   const [count, updateCounter] = useState(0);
 
   return (
-    <section className="card">
+    <section className="card" id="counter-card">
       <section className="card-container">
         <h1>Counter</h1>
         <section className="counter-button-container">
