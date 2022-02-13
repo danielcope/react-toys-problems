@@ -1,17 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const AosTesting = () => {
-  const key = {
-    1: "fade-up",
-    2: "fade-down",
-    3: "fade-left",
-    4: "fade-right",
-  };
-
   const list = [
     {
-      name: Math.floor(Math.random() * 4) + 1,
-      effect: key.name,
+      name: "1",
+      effect: "fade-right",
+    },
+    {
+      name: "2",
+      effect: "fade-left",
+    },
+    {
+      name: "3",
+      effect: "fade-up",
+    },
+    {
+      name: "4",
+      effect: "fade-down",
     },
   ];
 

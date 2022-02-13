@@ -32,7 +32,7 @@ const Nav = () => {
   ];
 
   return (
-    <section>
+    <section className="nav-section">
       <MenuButton menu={menu} flipMenu={flipMenu} />
       <nav className={menu ? "nav-opened" : "nav-closed"}>
         <ul>

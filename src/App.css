@@ -9,13 +9,14 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 10px;
 }
 
 body {
   background: #f7f7ff;
   color: #495867;
   padding: 50px 0 0 0;
-  margin: 0 10%;
+  margin: 0 10% 10% 10%;
 }
 
 h1 {
@@ -68,7 +69,7 @@ button:active {
 }
 
 p {
-  font-size: 24px;
+  font-size: 1.8rem;
 }
 
 ul {
@@ -84,7 +85,7 @@ ul {
 }
 
 li {
-  font-size: 32px;
+  font-size: 2.4rem;
 }
 
 a {
@@ -113,7 +114,7 @@ nav ul {
 }
 
 nav li {
-  width: 150px;
+  width: 250px;
   height: 50px;
   text-align: center;
   font-weight: 750;
@@ -125,8 +126,12 @@ nav > a {
 }
 
 nav a:hover {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   transition: all 0.3s ease-in-out;
+}
+
+.nav-section {
+  position: absolute;
 }
 
 .nav-opened {
@@ -201,9 +206,10 @@ nav a:hover {
 
 .card {
   min-height: 400px;
-  min-width: 300px;
   max-width: 500px;
+  min-width: 500px;
   margin: 25px;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,6 +310,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.error-message {
+  margin: 50px 0 0 0;
+  color: #fe5f55;
 }
 
 #AosTesting li {
