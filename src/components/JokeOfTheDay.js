@@ -31,15 +31,6 @@ const RandomFact = (props) => {
       });
   };
 
-  const jokeArr = () => {
-    let result = ["something", "something"];
-    let { text } = joke.contents.jokes[0].joke;
-
-    for (let i = 0; i < text.length; i++) {}
-
-    return result.map((ele, i) => <span>{ele}</span>);
-  };
-
   return (
     <section data-aos="fade-left" className="card" id="joke-of-the-day-card">
       <section className="card-container">
@@ -48,7 +39,6 @@ const RandomFact = (props) => {
           <section>
             <h2>Title: {joke.contents.jokes[0].joke.title}</h2>
             <p>{joke.contents.jokes[0].joke.text}</p>
-            <p>{jokeArr}</p>
           </section>
         ) : (
           <section></section>
