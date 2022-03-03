@@ -42,7 +42,7 @@ input {
   border: none;
   padding: 0 0 0 15px;
   box-shadow: inset 0.5px 0.5px 3px 0.5px rgb(175, 175, 175);
-  background: rgb(255, 255, 255);
+  background: #f7f7ff;
 }
 
 button {
@@ -250,13 +250,6 @@ nav a:hover {
   margin: 0 0 0 15px;
 }
 
-.separator {
-  border-bottom: 2.5px solid #583e3c;
-  margin: 5px;
-  height: 10px;
-  width: 80%;
-}
-
 .list {
   height: 60%;
   width: 95%;
@@ -277,16 +270,6 @@ nav a:hover {
   word-wrap: break-word;
   hyphens: auto;
   white-space: normal;
-}
-
-.to-do-list-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  width: 20%;
-}
-
-.pencil {
-  font-size: 22px;
 }
 
 .trash-can {

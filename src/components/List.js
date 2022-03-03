@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Separator from "../components/Icons/Separator";
 
 const List = () => {
   const [input, updateInput] = useState("");
@@ -53,22 +52,18 @@ const List = () => {
   };
 
   return (
-    <section className="card" id="to-do-list-card">
-      <section className="card-container">
-        <h1>To-Do List</h1>
-        <section>
-          <input
-            type="text"
-            placeholder="Add item here..."
-            value={input}
-            onChange={(e) => updateInput(e.target.value)}
-            onKeyDown={handleKeypress}
-          />
-          <button onClick={() => addToList()}>Add</button>
-        </section>
-        <Separator />
-        <section className="list">{mappedToDoList}</section>
+    <section >
+      <section>
+        <input
+          type="text"
+          placeholder="Add item here..."
+          value={input}
+          onChange={(e) => updateInput(e.target.value)}
+          onKeyDown={handleKeypress}
+        />
+        <button onClick={() => addToList()}>Add</button>
       </section>
+      <section className="list">{mappedToDoList}</section>
     </section>
   );
 };

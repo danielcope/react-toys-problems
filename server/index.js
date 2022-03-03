@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-app.get( "/api/weather/key", keys.fetchKey );
+app.get("/api/weather/key", keys.fetchKey);
 
 app.listen(SERVER_PORT, () =>
   console.log(`Server running on port` + " " + SERVER_PORT)

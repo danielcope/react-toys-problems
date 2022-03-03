@@ -22,10 +22,9 @@ const DiceRoller = () => {
   };
 
   return (
-    <div data-aos="fade-up" className="card" id="dice-roller-card">
-      <section className="card-container">
-        <h1>Dice Roller</h1>
-        <h4>Result: {finalRoll}</h4>
+    <div data-aos="fade-up" id="dice-roller-card">
+      <h4>Result: {finalRoll}</h4>
+      <section className="flex flex-col justify-center items-center h-44">
         <input
           type="number"
           value={numOfDice}

@@ -32,12 +32,11 @@ const RandomFact = (props) => {
   };
 
   return (
-    <section data-aos="fade-left" className="card" id="joke-of-the-day-card">
-      <section className="card-container">
-        <h1>Joke of the day</h1>
+    <section data-aos="fade-left" id="joke-of-the-day-card">
+      <section>
         {joke.contents ? (
           <section>
-            <h2>Title: {joke.contents.jokes[0].joke.title}</h2>
+            <h3>Title: {joke.contents.jokes[0].joke.title}</h3>
             <p>{joke.contents.jokes[0].joke.text}</p>
           </section>
         ) : (

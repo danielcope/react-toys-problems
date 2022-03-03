@@ -36,7 +36,7 @@ const Nav = () => {
       <MenuButton menu={menu} flipMenu={flipMenu} />
       <nav className={menu ? "nav-opened" : "nav-closed"}>
         <ul>
-          <NavList navList={navList} />
+          <NavList navList={navList} flipMenu={flipMenu} />
         </ul>
       </nav>
     </section>
@@ -64,7 +64,12 @@ const MenuButton = (props) => {
 
 const NavList = (props) => {
   const mappedNavList = props.navList.map((ele, i) => (
-    <NavLink key={ele.name} name={ele.name} id={ele.id} />
+    <NavLink
+      key={ele.name}
+      name={ele.name}
+      id={ele.id}
+      flipMenu={props.flipMenu}
+    />
   ));
 
   return <ul>{mappedNavList}</ul>;
@@ -73,7 +78,9 @@ const NavList = (props) => {
 const NavLink = (props) => {
   return (
     <li>
-      <a href={props.id}>{props.name}</a>
+      <a href={props.id} onClick={() => props.flipMenu(false)}>
+        {props.name}
+      </a>
     </li>
   );
 };
