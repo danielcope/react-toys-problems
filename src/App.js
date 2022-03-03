@@ -11,6 +11,7 @@ import RandomText from "./components/RandomText";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BetterList from "./components/BetterList";
 
 class App extends React.Component {
   componentDidMount() {
@@ -35,7 +36,9 @@ export const CardList = () => {
   ));
 
   return (
-    <section class="flex flex-wrap justify-around">{mappedCardList}</section>
+    <section className="flex flex-wrap justify-around">
+      {mappedCardList}
+    </section>
   );
 };
 
@@ -76,6 +79,10 @@ const cardList = [
   {
     title: "Joke of the Day",
     content: <JokeOfTheDay />,
+  },
+  {
+    title: "Better List",
+    content: <BetterList />,
   },
 ];
 

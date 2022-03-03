@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 const List = () => {
   const [input, updateInput] = useState("");
   const [toDoList, updateToDoList] = useState([]);
@@ -15,7 +18,7 @@ const List = () => {
         <span className="to-do-list-text">{e}</span>
         <section className="to-do-list-buttons">
           <div onClick={() => removeFromList(e)} className="trash-can">
-            &#128465;
+            <FontAwesomeIcon icon={faTrash} />
           </div>
         </section>
       </section>
@@ -52,7 +55,7 @@ const List = () => {
   };
 
   return (
-    <section >
+    <section>
       <section>
         <input
           type="text"
