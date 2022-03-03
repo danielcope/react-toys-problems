@@ -29,6 +29,10 @@ const Nav = () => {
       name: "Aos Testing",
       id: "#aos-testing-card",
     },
+    {
+      name: "Random Text",
+      id: "#random-text",
+    },
   ];
 
   return (

@@ -32,7 +32,7 @@ class App extends React.Component {
 
 export const CardList = () => {
   const mappedCardList = cardList.map((ele, i) => (
-    <Card key={i} title={ele.title} content={ele.content} />
+    <Card key={i} title={ele.title} content={ele.content} id={ele.id} />
   ));
 
   return (
@@ -44,7 +44,7 @@ export const CardList = () => {
 
 export const Card = (props) => {
   return (
-    <section className="card">
+    <section className="card" id={props.id}>
       <h1>{props.title}</h1>
       <section className="card-container">{props.content}</section>
     </section>
@@ -53,12 +53,9 @@ export const Card = (props) => {
 
 const cardList = [
   {
-    title: "Random Text",
-    content: <RandomText />,
-  },
-  {
     title: "AOS Testing",
     content: <AosTesting />,
+    id: "#aos-testing-card",
   },
   {
     title: "Counter",
@@ -83,6 +80,11 @@ const cardList = [
   {
     title: "Better List",
     content: <BetterList />,
+  },
+  {
+    title: "Random Text",
+    id: "#random-text",
+    content: <RandomText />,
   },
 ];
 

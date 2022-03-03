@@ -20,8 +20,9 @@ const AosTesting = () => {
     <ListContent key={i} name={ele.effect} effect={ele.effect} />
   ));
 
-  return <ul>{mappedList}</ul>;
+  return <ul id="#aos-testing-card">{mappedList}</ul>;
 };
 
 const ListContent = (props) => <li data-aos={props.effect}>{props.name}</li>;
+
 export default AosTesting;
