@@ -20,14 +20,17 @@ const RandomPerson = () => {
   };
 
   return (
-    <section data-aos="fade-right" id="random-person-card">
-      <section>
-        <button onClick={() => getPerson()}>New Person</button>
-        <section className="person-info-container">
-          <h3>Name: {personName}</h3>
-          <h3>Phone: {personPhone}</h3>
-          <h3>Email: {personEmail}</h3>
-        </section>
+    <section
+      id="random-person-card"
+      className="w-11/12 h-11/12 flex flex-col justify-center items-center"
+    >
+      <button onClick={() => getPerson()} className="w-28">
+        New Person
+      </button>
+      <section className="person-info-container">
+        <p>Name: {personName}</p>
+        <p>Phone: {personPhone}</p>
+        <p>Email: {personEmail}</p>
       </section>
     </section>
   );

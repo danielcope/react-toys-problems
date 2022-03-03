@@ -4,7 +4,7 @@
 
 @layer components {
   html {
-    @apply text-xs;
+    @apply text-xs scroll-smooth;
   }
 
   body {
@@ -49,6 +49,72 @@
     @apply list-none flex items-center flex-col justify-evenly w-11/12;
   }
 
+  nav {
+    @apply h-screen w-screen max-w-[600px] bg-black-200 shadow-nav fixed flex flex-col items-center content-center;
+  }
+
+  a {
+    @apply no-underline text-blue-100;
+  }
+
+  nav ul {
+    @apply z-[3];
+  }
+
+  nav li {
+    @apply w-60 h-12 text-center font-bold;
+  }
+
+  nav > a {
+    @apply flex w-28;
+  }
+
+  nav a {
+    @apply hover:text-2xl hover:transition-all hover:duration-300 hover:ease-in-out;
+  }
+
+  .nav-section {
+    @apply absolute;
+  }
+
+  .nav-opened {
+    @apply top-0 left-0 transition-all duration-500 ease-in-out z-[3];
+  }
+
+  .nav-closed {
+    @apply top-0 left-[-600px] transition-all duration-500 ease-in-out z-[3];
+  }
+
+  .ham-button-container {
+    @apply w-8 h-5 fixed left-6 top-6 flex flex-col justify-between z-[4] hover:cursor-pointer;
+  }
+
+  .line {
+    @apply w-auto h-[2px] bg-blue-300;
+  }
+
+  .light-line {
+    @apply w-auto h-[2px] bg-blue-100;
+  }
+
+  .top-line-x {
+    @apply transform rotate-45 top-[6px];
+  }
+
+  .mid-line-x {
+    @apply left-[-400px];
+  }
+
+  .bot-line-x {
+    @apply transform rotate-[-45deg] top-[-6px];
+  }
+
+  .top-line-x,
+  .mid-line-x,
+  .bot-line-x {
+    @apply relative transform duration-700 ease-in-out;
+  }
+
   .App {
     @apply flex flex-row justify-evenly flex-wrap;
   }
@@ -90,7 +156,7 @@
   }
 
   .person-info-container {
-    @apply h-2/3 w-11/12 flex flex-col justify-evenly;
+    @apply h-4/5 min-h-[12rem] w-11/12 mt-3 flex flex-col justify-evenly;
   }
 
   .error-message {

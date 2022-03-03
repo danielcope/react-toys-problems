@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/* <Nav /> */}
+        <Nav />
         <CardList />
       </div>
     );
@@ -35,9 +35,7 @@ export const CardList = () => {
   ));
 
   return (
-    <section class="flex flex-wrap justify-around pl-96 pr-96">
-      {mappedCardList}
-    </section>
+    <section class="flex flex-wrap justify-around">{mappedCardList}</section>
   );
 };
 
