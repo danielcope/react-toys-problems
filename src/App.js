@@ -1,8 +1,6 @@
-// import "./App.css";
 import React from "react";
 import Counter from "./components/Counter";
 import DiceRoller from "./components/DiceRoller";
-import List from "./components/List";
 import RandomPerson from "./components/RandomPerson";
 import JokeOfTheDay from "./components/JokeOfTheDay";
 import Nav from "./components/Nav";
@@ -23,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav cardList={cardList} />
         <CardList />
       </div>
     );
@@ -53,37 +51,44 @@ export const Card = (props) => {
 
 const cardList = [
   {
-    title: "AOS Testing",
-    content: <AosTesting />,
-    id: "#aos-testing-card",
+    title: "Better List",
+    id: "better-list-card",
+    href: "#better-list-card",
+    content: <BetterList />,
   },
   {
     title: "Counter",
+    id: "counter-card",
+    href: "#counter-card",
     content: <Counter />,
   },
   {
-    title: "To-Do List",
-    content: <List />,
+    title: "Joke of the Day",
+    id: "joke-of-the-day-card",
+    content: <JokeOfTheDay />,
   },
   {
     title: "Dice Roller",
+    id: "dice-roller-card",
+    href: "#dice-roller-card",
     content: <DiceRoller />,
   },
   {
     title: "Random Person",
+    id: "random-person-card",
+    href: "#random-person-card",
     content: <RandomPerson />,
   },
   {
-    title: "Joke of the Day",
-    content: <JokeOfTheDay />,
-  },
-  {
-    title: "Better List",
-    content: <BetterList />,
+    title: "AOS Testing",
+    id: "aos-testing-card",
+    href: "#aos-testing-card",
+    content: <AosTesting />,
   },
   {
     title: "Random Text",
-    id: "#random-text",
+    id: "random-text",
+    href: "#random-text",
     content: <RandomText />,
   },
 ];

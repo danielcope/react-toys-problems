@@ -1,46 +1,15 @@
 import React, { useState } from "react";
 import "animate.css";
 
-const Nav = () => {
+const Nav = (props) => {
   const [menu, flipMenu] = useState(false);
-
-  const navList = [
-    {
-      name: "To Do List",
-      id: "#to-do-list-card",
-    },
-    {
-      name: "Counter",
-      id: "#counter-card",
-    },
-    {
-      name: "Dice Roller",
-      id: "#dice-roller-card",
-    },
-    {
-      name: "Random Person",
-      id: "#random-person-card",
-    },
-    {
-      name: "Joke of the Day",
-      id: "#joke-of-the-day-card",
-    },
-    {
-      name: "Aos Testing",
-      id: "#aos-testing-card",
-    },
-    {
-      name: "Random Text",
-      id: "#random-text",
-    },
-  ];
 
   return (
     <section className="nav-section">
       <MenuButton menu={menu} flipMenu={flipMenu} />
       <nav className={menu ? "nav-opened" : "nav-closed"}>
         <ul>
-          <NavList navList={navList} flipMenu={flipMenu} />
+          <NavList navList={props.cardList} flipMenu={flipMenu} />
         </ul>
       </nav>
     </section>
@@ -69,9 +38,9 @@ const MenuButton = (props) => {
 const NavList = (props) => {
   const mappedNavList = props.navList.map((ele, i) => (
     <NavLink
-      key={ele.name}
-      name={ele.name}
-      id={ele.id}
+      key={ele.title}
+      name={ele.title}
+      id={ele.href}
       flipMenu={props.flipMenu}
     />
   ));

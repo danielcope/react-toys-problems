@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer components {
   html {
     @apply text-xs scroll-smooth;
   }
 
   body {
-    @apply w-screen bg-blue-100 text-grey-100 flex flex-col justify-center items-center content-center;
+    @apply bg-blue-100 text-grey-100 flex flex-col justify-center items-center content-center dark:bg-grey-100 dark:text-blue-200;
   }
 
   h1 {
@@ -37,12 +43,12 @@
   }
 
   input {
-    @apply w-44 h-6 rounded-md border-0 pl-4 bg-blue-100 shadow-inner;
+    @apply w-44 h-6 rounded-md border-0 pl-4 bg-blue-100 dark:bg-blue-100 dark:text-black-200 shadow-inner;
   }
 
   button {
     @apply w-16 h-7 bg-blue-300 text-blue-100 text-lg rounded-md ml-2 
-    shadow-button hover:cursor-pointer hover:bg-blue-200 hover:text-blue-300 active:bg-blue-100 active:text-blue-300;
+    shadow-button hover:cursor-pointer hover:bg-blue-200 hover:text-blue-300 active:bg-blue-100 active:text-blue-300 dark:text-black-200 dark:bg-blue-200 hover:dark:bg-blue-300 hover:dark:text-blue-100 active:dark:bg-grey-100 active:dark:text-blue-100;
   }
 
   ul {
@@ -53,12 +59,12 @@
     @apply text-xl;
   }
 
-  nav {
-    @apply h-screen w-screen max-w-[600px] bg-black-200 shadow-nav fixed flex flex-col items-center content-center;
-  }
-
   a {
     @apply no-underline text-blue-100;
+  }
+
+  nav {
+    @apply h-screen w-screen max-w-[600px] bg-black-200 shadow-nav fixed flex flex-col items-center content-center;
   }
 
   nav ul {
@@ -94,7 +100,7 @@
   }
 
   .line {
-    @apply w-auto h-[2px] bg-blue-300;
+    @apply w-auto h-[2px] bg-blue-300 dark:bg-blue-100;
   }
 
   .light-line {
@@ -120,11 +126,11 @@
   }
 
   .App {
-    @apply w-[450px] flex flex-row justify-evenly flex-wrap;
+    @apply max-w-[900px] flex flex-row justify-evenly flex-wrap;
   }
 
   .card {
-    @apply w-[400px] max-w-md min-h-400 pt-6 pb-6 m-6 flex flex-col content-center items-center shadow-3xl border-0 rounded-2xl;
+    @apply w-[400px] max-w-md min-h-400 pt-6 pb-6 m-6 flex flex-col content-center items-center shadow-card dark:shadow-cardDark border-0 rounded-2xl;
   }
 
   .card-container {
@@ -152,7 +158,7 @@
   }
 
   .trash-can {
-    @apply text-lg text-blue-300 hover:cursor-pointer hover:text-blue-100;
+    @apply text-lg text-blue-300 hover:cursor-pointer hover:text-blue-100 dark:text-blue-100 mt-1;
   }
 
   .counter-button-container {
