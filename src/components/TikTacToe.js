@@ -64,8 +64,8 @@ const TikTacToe = () => {
       return;
     } else if (
       currentBoard[0][0] === "X" &&
-      currentBoard[1][1] === "X" &&
-      currentBoard[2][2] === "X"
+      currentBoard[1][0] === "X" &&
+      currentBoard[2][0] === "X"
     ) {
       updateWinner("X");
       return;
@@ -120,8 +120,8 @@ const TikTacToe = () => {
       return;
     } else if (
       currentBoard[0][0] === "O" &&
-      currentBoard[1][1] === "O" &&
-      currentBoard[2][2] === "O"
+      currentBoard[1][0] === "O" &&
+      currentBoard[2][0] === "O"
     ) {
       updateWinner("O");
       return;
