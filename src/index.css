@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 @layer components {
   html {
     @apply text-xs scroll-smooth;
@@ -68,7 +62,7 @@
   }
 
   nav ul {
-    @apply z-[3];
+    @apply z-[3] min-h-[90%];
   }
 
   nav li {
@@ -173,7 +167,23 @@
     @apply mt-12 text-red-100;
   }
 
+  #AosTesting ul {
+    @apply min-h-[90%];
+  }
+
   #AosTesting li {
     @apply text-lg mt-2 mb-1;
+  }
+
+  .tttboard {
+    @apply w-[200px] h-[200px] min-h-[200px] flex flex-col justify-center;
+  }
+
+  .ttt-row {
+    @apply w-full h-[33%] flex;
+  }
+
+  .square {
+    @apply w-[33.33%] h-[100%] text-3xl flex justify-center items-center hover:bg-blue-300 active:bg-red-100;
   }
 }

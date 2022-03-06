@@ -10,6 +10,7 @@ import RandomText from "./components/RandomText";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BetterList from "./components/BetterList";
+import TikTacToe from "./components/TikTacToe";
 
 class App extends React.Component {
   componentDidMount() {
@@ -90,6 +91,12 @@ const cardList = [
     id: "random-text",
     href: "#random-text",
     content: <RandomText />,
+  },
+  {
+    title: "TikTacToe",
+    id: "tik-tac-toe",
+    href: "#tik-tac-toe",
+    content: <TikTacToe />,
   },
 ];
 
