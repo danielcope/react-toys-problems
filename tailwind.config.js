@@ -2,7 +2,24 @@ module.exports = {
   darkMode: "media",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        lsd: "lsd 8s ease-in-out infinite",
+      },
+      keyframes: {
+        lsd: {
+          "0%": {
+            filter: "hue-rotate(0deg)",
+          },
+          "50%": {
+            filter: "hue-rotate(-80deg)",
+          },
+          "100%": {
+            filter: "hue-rotate(0deg)",
+          },
+        },
+      },
+    },
     minHeight: {
       400: "400px",
       "9/10": "90%",

@@ -186,4 +186,8 @@
   .square {
     @apply w-[33.33%] h-[100%] text-3xl flex justify-center items-center hover:bg-blue-300 active:bg-red-100;
   }
+
+  .elephant {
+    @apply animate-lsd;
+  }
 }

@@ -11,6 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BetterList from "./components/BetterList";
 import TikTacToe from "./components/TikTacToe";
+import Face from "./components/Elephant";
 
 class App extends React.Component {
   componentDidMount() {
@@ -66,6 +67,7 @@ const cardList = [
   {
     title: "Joke of the Day",
     id: "joke-of-the-day-card",
+    href: "#joke-of-the-day",
     content: <JokeOfTheDay />,
   },
   {
@@ -97,6 +99,12 @@ const cardList = [
     id: "tik-tac-toe",
     href: "#tik-tac-toe",
     content: <TikTacToe />,
+  },
+  {
+    title: "Face",
+    id: "face",
+    href: "#face",
+    content: <Face />,
   },
 ];
 
