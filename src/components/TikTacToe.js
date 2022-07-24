@@ -161,6 +161,22 @@ const TikTacToe = () => {
       updateWinner("O");
       return;
     }
+
+    // this will handle for cats games when the board is full and no one wins
+    if (
+      currentBoard[0][0] !== "" &&
+      currentBoard[0][1] !== "" &&
+      currentBoard[0][2] !== "" &&
+      currentBoard[1][0] !== "" &&
+      currentBoard[1][1] !== "" &&
+      currentBoard[1][2] !== "" &&
+      currentBoard[2][0] !== "" &&
+      currentBoard[2][1] !== "" &&
+      currentBoard[2][2] !== ""
+    ) {
+      updateWinner("No one");
+      return;
+    }
   };
 
   const resetBoard = () => {
