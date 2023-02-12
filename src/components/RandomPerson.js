@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const RandomPerson = () => {
-  const [personName, updatePersonName] = useState("");
-  const [personPhone, updatePersonPhone] = useState("");
-  const [personEmail, updatePersonEmail] = useState("");
+  const [person, updatePerson] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   const getPerson = () => {
     const randomNum = Math.floor(Math.random() * 10) + 1;
@@ -12,9 +14,13 @@ const RandomPerson = () => {
     axios
       .get(`https://jsonplaceholder.typicode.com/users/${randomNum}`)
       .then((res) => {
-        updatePersonName(res.data.name);
-        updatePersonPhone(res.data.phone);
-        updatePersonEmail(res.data.email);
+        const person = {
+          name: res.data.name,
+          phone: res.data.phone,
+          email: res.data.email,
+        };
+
+        updatePerson(person);
       })
       .catch((err) => console.log(err));
   };
@@ -28,9 +34,9 @@ const RandomPerson = () => {
         New Person
       </button>
       <section className="person-info-container">
-        <p>Name: {personName}</p>
-        <p>Phone: {personPhone}</p>
-        <p>Email: {personEmail}</p>
+        <p>Name: {person.name}</p>
+        <p>Phone: {person.phone}</p>
+        <p>Email: {person.email}</p>
       </section>
     </section>
   );

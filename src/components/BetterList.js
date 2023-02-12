@@ -39,6 +39,10 @@ function BetterList() {
     }
   };
 
+  const clearList = () => {
+    updateList([]);
+  };
+
   return (
     <section>
       <input
@@ -49,6 +53,7 @@ function BetterList() {
         onKeyDown={handleKeypress}
       />
       <button onClick={() => addToList()}>add</button>
+      <button onClick={() => clearList()}>reset</button>
       <ul className="mt-3">{mappedList}</ul>
     </section>
   );
